@@ -8,7 +8,7 @@ using Hasin.Infrastructure.Repositories.Common;
 
 namespace Hasin.Infrastructure
 {
-    public static class PersistenceServicesRegistration
+    public static class InfrastructureServicesRegistration
     {
         public static IServiceCollection ConfigurePersistenceServices(this IServiceCollection services, IConfiguration configuration)
         {
