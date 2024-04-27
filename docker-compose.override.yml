@@ -1,0 +1,37 @@
+version: '3.4'
+
+services:
+  
+  redisdb:
+    container_name: redisdb
+    restart: always
+    ports:
+      - "6379:6379"
+
+  rabbitmq:
+    container_name: rabbitmq
+    restart: always
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+
+  hasin.api:
+    container_name: hasin.api
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__Redis=redisdb:6379
+      - EventBusSettings__HostAddress=amqp://guest:guest@rabbitmq:15672
+      - AppSetting__RedisDefaultET_Hour=0
+      - AppSetting__RedisDefaultET_Minute=0
+      - AppSetting__RedisDefaultET_Second=10
+      - AppSetting__InMemoryCacheET_Hour=0
+      - AppSetting__InMemoryCacheET_Minute=0
+      - AppSetting__InMemoryCacheET_Second=20
+    depends_on:
+      - rabbitmq
+      - redisdb
+    ports:
+      - "5000:8080"
+      
+

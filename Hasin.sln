@@ -7,21 +7,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CacheLibraries", "CacheLibr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{61E75A07-D1F4-431E-8AA6-0B8B26D1B9E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hasin.CacheCore", "src\CacheLibraries\Hasin.CacheCore\Hasin.CacheCore.csproj", "{66D0D138-4F66-4F49-B18C-C9271BA4F842}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hasin.CacheCore", "src\CacheLibraries\Hasin.CacheCore\Hasin.CacheCore.csproj", "{66D0D138-4F66-4F49-B18C-C9271BA4F842}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hasin.Redis", "src\CacheLibraries\Hasin.Redis\Hasin.Redis.csproj", "{68FF5FD3-0500-4F3A-BCB2-8FAEE24D3201}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hasin.Redis", "src\CacheLibraries\Hasin.Redis\Hasin.Redis.csproj", "{68FF5FD3-0500-4F3A-BCB2-8FAEE24D3201}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hasin.InMemory", "src\CacheLibraries\Hasin.InMemory\Hasin.InMemory.csproj", "{DE75CC39-4B85-4E6B-B3E5-2E382BD9D77C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hasin.InMemory", "src\CacheLibraries\Hasin.InMemory\Hasin.InMemory.csproj", "{DE75CC39-4B85-4E6B-B3E5-2E382BD9D77C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hasin.API", "src\Presentation\Hasin.API\Hasin.API.csproj", "{A8A264BD-DF82-46B8-BAE1-97CDD90E7FE4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hasin.API", "src\Presentation\Hasin.API\Hasin.API.csproj", "{A8A264BD-DF82-46B8-BAE1-97CDD90E7FE4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F406C43F-4DD6-4867-B801-9339251413A1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "src\Core\Domain\Domain.csproj", "{EC063C00-E2E4-4501-BC1C-D39A1BB570A8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "src\Core\Domain\Domain.csproj", "{EC063C00-E2E4-4501-BC1C-D39A1BB570A8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EventBus", "EventBus", "{A0BBFE30-6701-41E8-B90D-49C72CB73273}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventBus", "src\EventBus\EventBus\EventBus.csproj", "{FF296143-0E12-4217-8B12-86BA08C88AB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "src\EventBus\EventBus\EventBus.csproj", "{FF296143-0E12-4217-8B12-86BA08C88AB2}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{615D06CE-66F4-423F-A5CB-773697906DE7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{FF296143-0E12-4217-8B12-86BA08C88AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF296143-0E12-4217-8B12-86BA08C88AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF296143-0E12-4217-8B12-86BA08C88AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{615D06CE-66F4-423F-A5CB-773697906DE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{615D06CE-66F4-423F-A5CB-773697906DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{615D06CE-66F4-423F-A5CB-773697906DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{615D06CE-66F4-423F-A5CB-773697906DE7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
