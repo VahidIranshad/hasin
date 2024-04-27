@@ -46,5 +46,9 @@ namespace Hasin.API.Services
         {
             await _cacheFactory.Cache.Remove<Book>(id);
         }
+        public async Task AddData(Book book)
+        {
+            await _cacheFactory.Cache.AddAsync<Book>(book);
+        }
     }
 }

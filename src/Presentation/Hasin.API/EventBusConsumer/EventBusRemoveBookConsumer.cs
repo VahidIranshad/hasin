@@ -1,16 +1,18 @@
 ﻿using EventBus.Events;
 using Hasin.API.Services;
 using MassTransit;
+using Microsoft.Extensions.Logging;
 
 namespace Hasin.API.EventBusConsumer
 {
-    public class EventBusBookConsumer : IConsumer<BookIdEvent>
+    public class EventBusRemoveBookConsumer : IConsumer<BookIdEvent>
     {
 
         private readonly BookService _bookService;
-        public EventBusBookConsumer(BookService bookService)
+        public EventBusRemoveBookConsumer(BookService bookService, ILogger<EventBusRemoveBookConsumer> logger)
         {
             _bookService = bookService;
+            logger.Log(LogLevel.Information, "EventBusRemoveBookConsumer");
         }
 
 

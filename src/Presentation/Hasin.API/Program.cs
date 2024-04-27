@@ -18,6 +18,11 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddSingleton<IConnectionMultiplexer>(ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("Redis")));
 builder.Services.AddSingleton< CacheFactory>();
 builder.Services.AddScoped< BookService>();
+builder.Host.ConfigureLogging(logging =>
+{
+    logging.ClearProviders();
+    logging.AddConsole();
+});
 
 var app = builder.Build();
 

@@ -11,7 +11,7 @@ namespace Hasin.PublicherAPI.Controllers
     [Route("api/[controller]")]
     [Consumes(MediaTypeNames.Application.Json)]
     [Produces("application/json")]
-    public class BookPublicherController: ControllerBase
+    public class BookPublicherController : ControllerBase
     {
         private readonly IPublishEndpoint _publishEndpoint;
 
@@ -19,7 +19,7 @@ namespace Hasin.PublicherAPI.Controllers
         {
             _publishEndpoint = publishEndpoint;
         }
-        [HttpGet("{id}")]
+        [HttpDelete]
         public async Task<IActionResult> Remove(int id)
         {
             var model = new BookIdEvent() { BookId = id };
@@ -28,5 +28,20 @@ namespace Hasin.PublicherAPI.Controllers
             return Accepted();
         }
 
+        [HttpPost]
+        public async Task<IActionResult> Edit([FromBody] Book model)
+        {
+            var bookEvent = new BookEvent() { BookId = model.Id, BookValue = model.Value };
+
+            await _publishEndpoint.Publish(bookEvent);
+            return Accepted();
+        }
+
+    }
+
+    public class Book
+    {
+        public int Id { get; set; }
+        public required string Value { get; set; }
     }
 }

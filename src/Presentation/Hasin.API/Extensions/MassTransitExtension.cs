@@ -12,13 +12,15 @@ namespace Hasin.API.Extensions
             services.AddMassTransit(config =>
             {
 
-                config.AddConsumer<EventBusBookConsumer>();
+                config.AddConsumer<EventBusRemoveBookConsumer>();
+                config.AddConsumer<EventBusEditBookConsumer>();
                 config.UsingRabbitMq((ctx, cfg) =>
                 {
                     cfg.Host(configuration["EventBusSettings:HostAddress"]);
                     cfg.ReceiveEndpoint(EventBusConstant.HASIN_QUEUE, c =>
                     {
-                        c.ConfigureConsumer<EventBusBookConsumer>(ctx);
+                        c.ConfigureConsumer<EventBusRemoveBookConsumer>(ctx);
+                        c.ConfigureConsumer<EventBusEditBookConsumer>(ctx);
                     });
                 });
 
