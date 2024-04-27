@@ -30,7 +30,7 @@ namespace Hasin.API.Services
                     var bookJson = await response.Content.ReadAsStringAsync();
                     if (bookJson != null && bookJson.ToLower() != "null")
                     {
-                        var book = new Book { Id = id , Value = bookJson};
+                        var book = new Book { Id = id, Value = bookJson };
                         await _cacheFactory.Cache.AddAsync<Book>(book);
                         result = book;
                     }
@@ -41,6 +41,10 @@ namespace Hasin.API.Services
                 }
             }
             return result;
+        }
+        public async Task RemoveData(int id)
+        {
+            await _cacheFactory.Cache.Remove<Book>(id);
         }
     }
 }
