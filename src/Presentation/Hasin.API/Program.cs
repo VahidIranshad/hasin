@@ -3,8 +3,6 @@ using Hasin.API.Extensions;
 using Hasin.API.Factory;
 using Hasin.API.Middleware;
 using Hasin.API.Services;
-using Hasin.CacheCore.Contracts;
-using Hasin.CacheCore.Implementations;
 using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
 builder.Services.Configure<AppSetting>(builder.Configuration.GetSection("AppSetting"));
 
+builder.Services.ConfigureMassTransit(configuration);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.ConfigureSwagger();
