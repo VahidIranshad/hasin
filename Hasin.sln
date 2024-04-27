@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EventBus", "src\EventBus\Ev
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{615D06CE-66F4-423F-A5CB-773697906DE7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hasin.PublicherAPI", "src\Presentation\Hasin.PublicherAPI\Hasin.PublicherAPI.csproj", "{C9B894F5-180E-4E14-844C-32A6A86B5F78}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{615D06CE-66F4-423F-A5CB-773697906DE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{615D06CE-66F4-423F-A5CB-773697906DE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{615D06CE-66F4-423F-A5CB-773697906DE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9B894F5-180E-4E14-844C-32A6A86B5F78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9B894F5-180E-4E14-844C-32A6A86B5F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9B894F5-180E-4E14-844C-32A6A86B5F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9B894F5-180E-4E14-844C-32A6A86B5F78}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,6 +76,7 @@ Global
 		{A8A264BD-DF82-46B8-BAE1-97CDD90E7FE4} = {61E75A07-D1F4-431E-8AA6-0B8B26D1B9E7}
 		{EC063C00-E2E4-4501-BC1C-D39A1BB570A8} = {F406C43F-4DD6-4867-B801-9339251413A1}
 		{FF296143-0E12-4217-8B12-86BA08C88AB2} = {A0BBFE30-6701-41E8-B90D-49C72CB73273}
+		{C9B894F5-180E-4E14-844C-32A6A86B5F78} = {61E75A07-D1F4-431E-8AA6-0B8B26D1B9E7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A75A04F-EC85-4CD5-9BEB-17674A785955}

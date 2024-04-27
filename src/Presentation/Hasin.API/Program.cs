@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 ConfigurationManager configuration = builder.Configuration;
 builder.Services.Configure<AppSetting>(builder.Configuration.GetSection("AppSetting"));
 
-//builder.Services.ConfigureMassTransit(configuration);
+builder.Services.ConfigureMassTransit(configuration);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.ConfigureSwagger();

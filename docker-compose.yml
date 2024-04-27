@@ -9,10 +9,16 @@ services:
     image: rabbitmq:3-management-alpine
 
   hasin.api:
-    image: ${DOCKER_REGISTRY-}identity
+    image: ${DOCKER_REGISTRY-}hasin.api
     build:
       context: .
       dockerfile: src/Presentation/Hasin.API/Dockerfile
+
+  hasin.publicher.api:
+    image: ${DOCKER_REGISTRY-}hasin.publicher.api
+    build:
+      context: .
+      dockerfile: src/Presentation/Hasin.PublicherAPI/Dockerfile
       
 
       
