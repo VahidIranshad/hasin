@@ -44,5 +44,18 @@ services:
       - rabbitmq
     ports:
       - "5002:8080"
+
+ # hasin.unit.test:
+ #   container_name: hasin.unit.test
+ #   environment:
+ #     - ASPNETCORE_ENVIRONMENT=Development
+ #   depends_on:
+ #     - redisdb
+ #     - hasin.publicher.api
+ #     - hasin.api
+ #   entrypoint:
+ #       - dotnet
+ #       - UnitTest.dll
+ #       - --logger
       
 

@@ -19,6 +19,13 @@ services:
     build:
       context: .
       dockerfile: src/Presentation/Hasin.PublicherAPI/Dockerfile
+
+#  hasin.unit.test:
+#    image: ${DOCKER_REGISTRY-}hasin.unit.test
+#    build:
+#      context: .
+#      dockerfile: src/Test/UnitTest/Dockerfile
+
       
 
       
