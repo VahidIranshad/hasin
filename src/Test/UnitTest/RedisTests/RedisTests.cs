@@ -5,12 +5,12 @@ using UnitTest.Fixtures;
 
 namespace UnitTest.RedisTest
 {
-    public class RedisTest : IClassFixture<RedisInitializer>
+    public class RedisTests : IClassFixture<RedisInitializer>
     {
         private readonly RedisCache _redisCache;
 
         private readonly TimeSpan _expireTime;
-        public RedisTest(RedisInitializer redisInitializer)
+        public RedisTests(RedisInitializer redisInitializer)
         {
             _expireTime = new TimeSpan(0, 0, 5);
             _redisCache = new RedisCache(redisInitializer.RedisConnection.GetDatabase(), new JsonItemSerializer(), _expireTime);
@@ -46,7 +46,7 @@ namespace UnitTest.RedisTest
 
 
         [Fact]
-        public async Task Valid_Get_AfterEpiration()
+        public async Task InValid_Get_AfterEpiration()
         {
 
             var book = new Book() { Id = -1, Value = "Test" };

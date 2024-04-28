@@ -3,7 +3,7 @@ using Hasin.CacheCore.Contracts;
 using Hasin.InMemory;
 using UnitTest.Fixtures;
 
-namespace UnitTest.MemoryCacheTest
+namespace UnitTest.MemoryCacheTests
 {
     public class MemoryCacheTests : IClassFixture<MemoryCacheInitializer>
     {
@@ -13,7 +13,7 @@ namespace UnitTest.MemoryCacheTest
         public MemoryCacheTests(MemoryCacheInitializer memoryCacheInitializer)
         {
             _expireTime = new TimeSpan(0, 0, 5);
-            _memoryCache = new InMemoryCache(_expireTime, memoryCacheInitializer._cache);
+            _memoryCache = new InMemoryCache(_expireTime, memoryCacheInitializer.Cache);
         }
 
         [Fact]
@@ -46,7 +46,7 @@ namespace UnitTest.MemoryCacheTest
 
 
         [Fact]
-        public async Task Valid_Get_AfterEpiration()
+        public async Task InValid_Get_AfterEpiration()
         {
 
             var book = new Book() { Id = -1, Value = "Test" };
